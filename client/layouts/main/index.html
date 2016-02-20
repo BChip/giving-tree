@@ -1,0 +1,48 @@
+<template name="home">
+  <body>
+    <nav class="navbar-default transparent navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Giving Tree</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            {{#if currentUser}}
+              <li><a href="{{pathFor 'interface'}}">Create New List</a></li>
+            {{/if}}
+            {{> loginButtons}}
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <br /><br />
+    <div class="bg">
+    <div class="jumbotron">
+      <div class="container">
+  <h2>Help Teachers Get Supplies For Their Students!</h2>
+  <h3>Lending Buddy is a app in where you can find a local school teacher and donate supplies they need!</h3>
+</div>
+</div>
+</div>
+<br />
+    <div class="container">
+
+  <div class="media-body">
+    {{#each teacherlist}}
+    <h4 class="media-heading">{{school}} - {{teacherName}}</h4>
+    <p>{{schoolAddress}} - {{schoolCity}} - {{schoolState}} - {{schoolZip}} - {{schoolPhone}}</p>
+    {{#each List}}<li>{{name}} - {{amount}}</li>{{/each}}
+    <a href="{{pathFor ':_id'}}">Check Out This List</a>
+    <hr>
+    {{/each}}
+  </div>
+    </div><!-- /.container -->
+    
+  </body>
+</template>
