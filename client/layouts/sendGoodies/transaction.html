@@ -1,5 +1,6 @@
-<template name="interface">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+<template name="transaction">
+    <body>
+    <nav class="navbar-default transparent navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -8,22 +9,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Lending Buddy</a>
+          <a class="navbar-brand" href="#">Giving Tree</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             {{#if currentUser}}
-            <li><a href="{{pathFor 'home'}}">Home</a></li>
+              <li><a href="{{pathFor 'interface'}}">Create New List</a></li>
             {{/if}}
             {{> loginButtons}}
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-    <br /><br />
+    <br /><br /><br />
     <div class="container">
-    <h1>Teacher List</h1>
-    {{> flashMessages}}
-    {{> quickForm collection="teacherList" id="insertListForm" type="insert" buttonContent="Post!" resetOnSuccess=true validation="blur"}}
+        <h1>Thanks for your donation! Have a great day!</h1>
     </div>
+    
+    </body>
+    
 </template>

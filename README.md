@@ -28,3 +28,6 @@ App ID : 1775914479305783
 App Secret : 17a91ce351bda2df84c2f16e09a14256
 
 http://meteortips.com/second-meteor-tutorial/iron-router-part-2/3
+
+meteor mongo
+db.teacherlist.find()

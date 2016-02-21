@@ -1,5 +1,3 @@
-Meteor.subscribe('teacherlist');
-
 teacherList.after.insert(function(userId, doc) {
   FlashMessages.sendSuccess('List Submitted! Redirecting...');
   window.setTimeout(myTimer, 3000);

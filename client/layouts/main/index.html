@@ -30,18 +30,20 @@
 </div>
 </div>
 </div>
-<br />
     <div class="container">
-
+<h1>Current Lists</h1>
+<hr>
   <div class="media-body">
     {{#each teacherlist}}
     <h4 class="media-heading">{{school}} - {{teacherName}}</h4>
     <p>{{schoolAddress}} - {{schoolCity}} - {{schoolState}} - {{schoolZip}} - {{schoolPhone}}</p>
     {{#each List}}<li>{{name}} - {{amount}}</li>{{/each}}
-    <a href="{{pathFor ':_id'}}">Check Out This List</a>
+    <br />
+    <a href="{{pathFor ':_id'}}"><button class="btn btn-success" >Check Out This List</button></a>
     <hr>
     {{/each}}
   </div>
+  
     </div><!-- /.container -->
     
   </body>

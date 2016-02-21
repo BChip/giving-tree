@@ -28,7 +28,7 @@
   <h2>{{school}} - {{teacherName}}</h2>
   <h3>{{schoolAddress}} - {{schoolCity}} - {{schoolState}} - {{schoolZip}} - {{schoolPhone}}</h3>
   {{#each List}}<li>{{name}} - {{amount}}</li>{{/each}}
-  <a href="#">Fund Now</a>
+  <a href="{{pathFor ':_id/send'}}"><button class="btn btn-success">Fund Now</button></a>
 </div>
 </div>
 </div>

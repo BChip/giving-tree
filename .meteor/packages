@@ -26,3 +26,8 @@ accounts-facebook
 service-configuration
 mrt:flash-messages
 matb33:collection-hooks
+aslagle:reactive-table
+http
+reactive-var
+check
+fortawesome:fontawesome
