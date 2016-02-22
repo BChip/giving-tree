@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Giving Tree</a>
+          <a class="navbar-brand" href="{{pathFor 'home'}}">Giving Tree</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -24,7 +24,9 @@
     <br /><br /><br />
     <div class="container">
     {{> flashMessages}}
-    <h2>{{#each List}} {{name}} <hr> {{/each}}</h2>
+    <h1>Teacher's List:</h1>
+    <hr>
+    <h2>{{#each List}} <li>{{name}}</li> <hr> {{/each}}</h2>
     {{> quickForm collection="buyersList" id="insertList" type="insert" buttonContent="Send!" resetOnSuccess=true}}
     </div>
     

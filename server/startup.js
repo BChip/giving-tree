@@ -6,10 +6,22 @@
      return buyersList.find({});
  });
  
+
  
  Meteor.methods({
 		fetchWebsiteFromService: function(itemName) {
-		  var itemName = 13487610;
+		  	itemName = itemName.toLowerCase();
+			switch (itemName) {
+				case "tissues":
+					itemName = 13487610;
+					break;
+				case "pencils":
+					itemName = 10805587;
+					break;
+				default:
+					itemName = 14430339; 
+			}
+		  	var itemName = 13487610;
 			var url = "http://api.target.com/products/v3/" + itemName + "?id_type=tcin&key=J5PsS2XGuqCnkdQq0Let6RSfvU7oyPwF";
 			//synchronous GET
 			var result = Meteor.http.get(url, {timeout:30000});
@@ -24,7 +36,17 @@
 			}
 		},
 		fetchNameFromService: function(itemName) {
-		  var itemName = 13487610;
+			itemName = itemName.toLowerCase();
+			switch (itemName) {
+				case "tissues":
+					itemName = 13487610;
+					break;
+				case "pencils":
+					itemName = 10805587;
+					break;
+				default:
+					itemName = 14430339; 
+			}
 			var url = "http://api.target.com/products/v3/" + itemName + "?id_type=tcin&fields=descriptions&key=J5PsS2XGuqCnkdQq0Let6RSfvU7oyPwF";
 			//synchronous GET
 			var result = Meteor.http.get(url, {timeout:30000});
@@ -39,7 +61,18 @@
 			}
 		},
 		fetchPriceFromService: function(itemName) {
-			var itemName = 13487610;
+			itemName = itemName.toLowerCase();
+			switch (itemName) {
+				case "tissues":
+					itemName = 13487610;
+					break;
+				case "pencils":
+					itemName = 10805587;
+					break;
+				default:
+					itemName = 14430339; 
+			}
+			
 			var url = "http://api.target.com/products/v3/" + itemName + "?id_type=tcin&fields=pricing&key=J5PsS2XGuqCnkdQq0Let6RSfvU7oyPwF";
 			//synchronous GET
 			var result = Meteor.http.get(url, {timeout:30000});
@@ -54,7 +87,18 @@
 			}
 		},
 		fetchImageURLFromService: function(itemName) {
-			var itemName = 13487610;
+			itemName = itemName.toLowerCase();
+			switch (itemName) {
+				case "tissues":
+					itemName = 13487610;
+					break;
+				case "pencils":
+					itemName = 10805587;
+					break;
+				default:
+					itemName = 14430339; 
+			}
+			
 			var url = "http://api.target.com/products/v3/" + itemName + "?id_type=tcin&fields=images&key=J5PsS2XGuqCnkdQq0Let6RSfvU7oyPwF";
 			//synchronous GET
 			var result = Meteor.http.get(url, {timeout:30000});

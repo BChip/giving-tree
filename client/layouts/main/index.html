@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Giving Tree</a>
+          <a class="navbar-brand" href="{{pathFor 'home'}}"><img src="http://i19.photobucket.com/albums/b156/pupz20/Icon%203.png" style ="height: 30px"></a><br /><br />
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -37,7 +37,7 @@
     {{#each teacherlist}}
     <h4 class="media-heading">{{school}} - {{teacherName}}</h4>
     <p>{{schoolAddress}} - {{schoolCity}} - {{schoolState}} - {{schoolZip}} - {{schoolPhone}}</p>
-    {{#each List}}<li>{{name}} - {{amount}}</li>{{/each}}
+    {{#each List}}<li>{{name}}</li>{{/each}}
     <br />
     <a href="{{pathFor ':_id'}}"><button class="btn btn-success" >Check Out This List</button></a>
     <hr>

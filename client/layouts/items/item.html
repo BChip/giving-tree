@@ -1,5 +1,5 @@
 <template name="item">
-      <body>
+      <body id="bg">
     <nav class="navbar-default transparent navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -9,7 +9,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Giving Tree</a>
+          <a class="navbar-brand" href="{{pathFor 'home'}}">Giving Tree</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -22,14 +22,17 @@
       </div>
     </nav>
     <br /><br />
-    <div class="bg">
-    <div class="jumbotron">
-      <div class="container">
+    <div class="container">
+      <br /><br />
+      <div class="panel panel-default">
+        <center>
   <h2>{{school}} - {{teacherName}}</h2>
   <h3>{{schoolAddress}} - {{schoolCity}} - {{schoolState}} - {{schoolZip}} - {{schoolPhone}}</h3>
-  {{#each List}}<li>{{name}} - {{amount}}</li>{{/each}}
+  <p>List:</p>{{#each List}}<li>{{name}}</li>{{/each}}
+  <br />
   <a href="{{pathFor ':_id/send'}}"><button class="btn btn-success">Fund Now</button></a>
-</div>
+  <br /><br /><br />
+  </center>
 </div>
 </div>
 
